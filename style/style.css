@@ -1,0 +1,146 @@
+body {
+    font-family: "Jura", serif;
+    margin: 0 auto;
+    background-color: rgb(35, 35, 35);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 100px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+    position: absolute;
+    left: 2%;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.container-render {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    transition: transform 1s ease;
+    z-index: 999;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    transition: transform 1s ease;
+    overflow: hidden;
+}
+.feather-chevron-down{
+    position: absolute;
+    left: 90%;
+}
+.feather-x{
+    position: absolute;
+    left: 90%;
+    top: 1%;
+}
+.modal .title{
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 25px;
+}
+.desc{
+    font-size: 20px;
+    text-align: center;
+}
+.modal button{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.property{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.property-data{
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0px 10px 0px;
+    padding-left: 4%;
+    font-weight: 700;
+}
+.property-data :last-child{
+    font-weight: normal;
+    margin-left: 44%;
+    position: absolute;
+}
+.select{
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-top: 10px;
+    padding: 5px;
+    padding-left: 15%;
+}
+.move-modal {
+    transform: translateX(60%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.move-render-container{
+    transform: translateX(-50%);
+}
+
+
+
+.property {
+    display: none; /* Скрыть блоки свойств по умолчанию */
+}
+
+.property.active {
+    display: block; /* Показать блоки свойств при активации */
+}
